@@ -23,7 +23,7 @@
     <nav class="topnav">
         <div class="nav-brand">
             <img src="EZ0UI.svg" alt="EZ0UI" class="h-8 w-auto logo-glow">
-            <span class="version-badge">V2.7</span>
+            <span class="version-badge">V2.8</span>
         </div>
         <div id="selectionStatus" class="hidden selection-pill">
             <i data-lucide="check-square" class="w-3.5 h-3.5"></i>
@@ -64,12 +64,17 @@
             <div class="controls-row">
 
                 <!-- Counter -->
-                <div class="ctrl-card counter-card">
+				<div class="ctrl-card expandable">
                     <div class="card-collapsed">
                         <i data-lucide="image" class="card-icon" aria-hidden="true"></i>
                         <span class="card-value mono" id="counterDisplay">1 / 1</span>
                     </div>
+					<!-- <div class="card-expanded">
+                        <p class="exp-title">Draw Call</p>
+                        <span class="card-value mono" id="drawCallDisplay">000000</span>
+                    </div> -->
                 </div>
+                
 
                 <!-- Blend Mode -->
                 <div class="ctrl-card expandable" id="blendCard">
@@ -116,7 +121,7 @@
                     </div>
                 </div>
 
-                <!-- Eye / Selection -->
+                <!-- Selection -->
                 <div class="ctrl-card expandable eye-card" id="eyeCard">
                     <div class="card-collapsed" id="eyeCollapsed" onclick="toggleEye()">
                         <div class="eye-icon-wrap" id="eyeIconWrap">
