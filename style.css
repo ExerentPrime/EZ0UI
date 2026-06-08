@@ -413,7 +413,7 @@ body {
     color: rgba(168,85,247,0.75);
     resize: none; outline: none;
 }
-#resultArea::-webkit-scrollbar { width: 5px; }
+#resultArea::-webkit-scrollbar { width: 10px; }
 #resultArea::-webkit-scrollbar-track { background: transparent; }
 #resultArea::-webkit-scrollbar-thumb { background: rgba(168,85,247,0.25); border-radius: 4px; }
 #resultArea::-webkit-scrollbar-thumb:hover { background: var(--purple); }
