@@ -69,7 +69,7 @@ body {
 /* ── Layout ── */
 .main-wrap {
     max-width: 1344px; margin: 0 auto;
-    padding: 22px 24px 56px;
+    padding: 22px 24px 0px;
 }
 
 /* ── Picker ── */
@@ -440,29 +440,29 @@ body {
 .alert-btn:hover { background: rgba(248,113,153,0.16); }
 
 /* ── Music Pill ── */
-.icon-pill {
-    display: flex; align-items: center; gap: 0;
-    background: rgba(12,6,24,0.85);
-    border: 1px solid var(--border);
-    border-radius: 40px; overflow: hidden;
-    transition: all 0.35s ease;
-    backdrop-filter: blur(8px);
-}
-.pill-icon-btn {
-    width: 44px; height: 44px;
-    display: flex; align-items: center; justify-content: center;
-    background: none; border: none; cursor: pointer;
-    color: var(--text-muted); transition: color 0.2s; flex-shrink: 0;
-}
-.pill-icon-btn:hover { color: var(--purple); }
-.pill-label {
-    font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--text-muted);
-    max-width: 0; overflow: hidden; white-space: nowrap;
-    opacity: 0;
-    transition: max-width 0.35s ease, padding 0.35s ease, opacity 0.28s ease;
-}
-.icon-pill:hover .pill-label { max-width: 200px; padding-right: 16px; opacity: 1; }
+/* .icon-pill { */
+    /* display: flex; align-items: center; gap: 0; */
+    /* background: rgba(12,6,24,0.85); */
+    /* border: 1px solid var(--border); */
+    /* border-radius: 40px; overflow: hidden; */
+    /* transition: all 0.35s ease; */
+    /* backdrop-filter: blur(8px); */
+/* } */
+/* .pill-icon-btn { */
+    /* width: 44px; height: 44px; */
+    /* display: flex; align-items: center; justify-content: center; */
+    /* background: none; border: none; cursor: pointer; */
+    /* color: var(--text-muted); transition: color 0.2s; flex-shrink: 0; */
+/* } */
+/* .pill-icon-btn:hover { color: var(--purple); } */
+/* .pill-label { */
+    /* font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; */
+    /* color: var(--text-muted); */
+    /* max-width: 0; overflow: hidden; white-space: nowrap; */
+    /* opacity: 0; */
+    /* transition: max-width 0.35s ease, padding 0.35s ease, opacity 0.28s ease; */
+/* } */
+/* .icon-pill:hover .pill-label { max-width: 200px; padding-right: 16px; opacity: 1; } */
 
 /* ── Helper ── */
 .helper-container {
