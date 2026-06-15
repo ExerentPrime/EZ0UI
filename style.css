@@ -48,7 +48,7 @@ body {
     display: flex; justify-content: space-between; align-items: center;
 }
 .nav-brand { display: flex; align-items: center; gap: 12px; }
-.logo-glow { filter: drop-shadow(0 0 8px rgba(168,85,247,0.55)); height: 44px; width: auto; }
+.logo-glow { filter: drop-shadow(0 0 8px rgba(168,85,247,0.55)); height: 44px; width: auto; cursor: pointer; }
 .version-badge {
     font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
     color: var(--purple-dim);
@@ -69,7 +69,7 @@ body {
 /* ── Layout ── */
 .main-wrap {
     max-width: 1344px; margin: 0 auto;
-    padding: 22px 24px 0px;
+    padding: 0px 24px 0px;
 }
 
 /* ── Picker ── */
@@ -88,8 +88,8 @@ body {
 .picker-inner { display: flex; flex-direction: column; align-items: center; gap: 18px; }
 .picker-icon-wrap {
     width: 88px; height: 88px; border-radius: 22px;
-    background: rgba(168,85,247,0.07);
-    border: 1px solid var(--border);
+    /* background: rgba(168,85,247,0.07); */
+    /* border: 1px solid var(--border); */
     display: flex; align-items: center; justify-content: center;
     transition: all 0.3s;
 }
@@ -104,8 +104,102 @@ body {
 }
 .picker-sub { font-size: 13px; color: var(--text-muted); letter-spacing: 0.02em; }
 
+/* ── First time user ── */
+.firsttime-text {
+    /* border: 1px solid rgba(168,85,247,0.18); */
+    border-radius: 24px;
+	padding: 20px 0px;
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color 0.3s, background 0.3s;
+    margin-top: 20px;
+	/* flex-direction: column; */
+	background: rgba(168,85,247,0.07);
+	cursor: pointer;
+}
+
+.firsttime-label { font-size: 13px; color: var(--text-muted); letter-spacing: 0.02em; }
+
 /* ── Viewer ── */
 .viewer-layout { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
+
+/* ── Instruction ── */
+.instruction-layout { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
+
+.instruction-container {
+    display: flex;
+	flex-direction: column;
+    flex-wrap: wrap;
+    /* gap: 3px; */
+    width: 100%;
+	align-items: center; justify-content: center;
+    /* background: rgba(0, 0, 0, 0.2); */
+    /* padding: 8px; */
+    /* border-radius: 10px; */
+    /* border: 1px solid rgba(168, 85, 247, 0.08); */
+    margin-top: 20px;
+    /* margin-bottom: 6px; */
+}
+
+.instruction-title {
+	font-size: 17px; font-weight: 600; letter-spacing: 0.06em;
+    color: var(--purple); text-transform: uppercase;
+	margin-top: 40px;
+}
+
+.instruction-body {
+	font-size: 13px; letter-spacing: 0.02em;
+    color: var(--text);
+}
+
+/* ── Interactive Timeline Bar ── */
+.timeline-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    width: 100%;
+    /* background: rgba(0, 0, 0, 0.2); */
+    /* padding: 8px; */
+    /* border-radius: 10px; */
+    /* border: 1px solid rgba(168, 85, 247, 0.08); */
+    /* margin-top: 6px; */
+    /* margin-bottom: 6px; */
+}
+
+.timeline-dot {
+    flex: 1;
+    min-width: 8px;
+    height: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: transform 0.15s, opacity 0.15s;
+    opacity: 0.65;
+}
+
+/* Warna asal (Visible) = Hijau */
+.timeline-dot.visible-dot {
+    background-color: var(--green);
+    /* box-shadow: 0 0 4px rgba(52, 211, 153, 0.2); */
+}
+
+/* Warna bila dah marked (Hidden) = Merah */
+.timeline-dot.hidden-dot {
+    background-color: var(--red);
+    /* box-shadow: 0 0 4px rgba(248, 113, 113, 0.2); */
+}
+
+/* Dot untuk gambar yang tengah aktif / dipapar sekarang */
+.timeline-dot.active-dot {
+    transform: scaleY(1.3) scaleX(1.1);
+    opacity: 1 !important;
+    outline: 1px solid #fff;
+    box-shadow: 0 0 8px #fff;
+	z-index: 200;
+}
+
+.timeline-dot:hover {
+    opacity: 1;
+    transform: scaleY(1.2);
+}
 
 /* ── Gallery ── */
 .gallery-container {
@@ -200,7 +294,7 @@ body {
 }
 .mono { font-family: 'DM Mono', monospace; }
 
-/* ── Expanded State — OVERLAY (floats above, no layout shift) ── */
+/* ── Expanded State — OVERLAY ── */
 .card-expanded {
     position: absolute;
     bottom: calc(100% + 8px); /* appear above the card */
@@ -325,6 +419,7 @@ body {
     font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
     text-transform: uppercase; cursor: pointer;
     transition: all 0.2s;
+	justify-content: center
 }
 .eye-toggle-btn:hover { background: rgba(52,211,153,0.15); }
 .eye-toggle-btn.hidden-active {
