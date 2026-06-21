@@ -56,6 +56,29 @@ body {
     border: 1px solid var(--border);
     padding: 4px 12px; border-radius: 20px;
 }
+
+.current-info {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Jarak antara pill-pill */
+}
+
+.toggle-pill {
+    display: flex; align-items: center; gap: 7px;
+    background: rgba(168,85,247,0.1);
+    border: 2px solid rgba(168,85,247,0.28);
+    color: var(--purple);
+    font-size: 13px; font-weight: 600; letter-spacing: 0.08em;
+    padding: 6px 16px; border-radius: 20px;
+}
+.toggle-pill-label { color: var(--purple-dim); font-weight: 400; }
+
+/* Efek hover bila mouse lalu atas butang */
+.toggle-pill:hover {
+    background: rgba(168, 85, 247, 0.15);
+    border-color: rgba(168, 85, 247, 0.3);
+}
+
 .selection-pill {
     display: flex; align-items: center; gap: 7px;
     background: rgba(168,85,247,0.1);
@@ -149,6 +172,24 @@ body {
 .instruction-body {
 	font-size: 13px; letter-spacing: 0.02em;
     color: var(--text);
+}
+
+/*  Override Method  */
+.override-method-layout { display: flex; flex-direction: column; gap: 14px; margin-top: 50px; }
+
+.override-method-row {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+	margin-top: 50px;
+}
+
+.override-method-value {
+    font-size: 24px; font-weight: 500; letter-spacing: 0.06em;
+    color: var(--text-mid);
+    text-align: center;
+    line-height: 1;
 }
 
 /*  Interactive Timeline Bar  */
@@ -276,6 +317,7 @@ body {
     gap: 7px; padding: 20px 12px;
     min-height: 94px;
     position: relative; z-index: 1;
+	cursor: pointer;
 }
 
 .card-icon {
