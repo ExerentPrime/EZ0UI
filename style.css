@@ -51,9 +51,9 @@ body {
 .logo-glow { filter: drop-shadow(0 0 8px rgba(168,85,247,0.55)); height: 44px; width: auto; cursor: pointer; }
 .version-badge {
     font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
-    color: var(--purple-dim);
+    color: var(--purple);
     background: rgba(168,85,247,0.07);
-    border: 1px solid var(--border);
+    border: 1px solid rgba(168,85,247,0.28);
     padding: 4px 12px; border-radius: 20px;
 }
 
