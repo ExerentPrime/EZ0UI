@@ -28,9 +28,13 @@
     <nav class="topnav">
         <div class="nav-brand">
             <img src="EZ0UI.svg" alt="EZ0UI" class="h-8 w-auto logo-glow" onclick="window.location.reload();">
-            <span class="version-badge">V5.10</span>
+            <span class="version-badge">V5.14</span>
         </div>
 		<div class="current-info">
+			<button id="textureTagBtn" class="hidden toggle-pill">
+				<i id="textureTagIcon" data-lucide="search" class="w-3.5 h-3.5"></i>
+				<span id="textureTagLabel" class="hidden"></span>
+			</button>
 			<button id="methodToggleBtn" class="hidden toggle-pill">
 				<i id="toggleIcon" data-lucide="layers" class="w-3.5 h-3.5"></i>
 				<span id="toggleLabel">ShaderOverride</span>
@@ -165,6 +169,15 @@
 					<div class="card-expanded">
                         <p class="exp-title">Draw Call</p>
                         <span class="card-value mono" id="drawCallDisplay">000000</span>
+						<div class="exp-header-row">
+                            <p class="exp-title">Tag Color</p>
+                            <button onclick="resetTag(true)" class="mini-reset">Reset</button>
+                        </div>
+                        <div class="blend-toggle-row">
+                            <button class="tag-color-btn blue-tag" id="btnBlue" onclick="tagColor('Blue')">B</button>
+                            <button class="tag-color-btn gray-tag" id="btnGray" onclick="tagColor('Gray')">G</button>
+							<button class="tag-color-btn yellow-tag" id="btnYellow" onclick="tagColor('Yellow')">Y</button>
+                        </div>
                     </div>
                 </div>
                 
@@ -243,6 +256,9 @@
 						<div class="eye-actions">
                             <button onclick="toggleAllPrevious()" class="eye-action-btn">
                                 <i data-lucide="chevrons-left" class="w-3 h-3"></i>
+                            </button>
+							<button onclick="selectAllTag()" class="eye-action-btn">
+                                <i data-lucide="tag" class="w-3 h-3"></i>
                             </button>
                             <button onclick="toggleAllNext()" class="eye-action-btn">
                                 <i data-lucide="chevrons-right" class="w-3 h-3"></i>

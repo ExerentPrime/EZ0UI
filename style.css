@@ -6,6 +6,12 @@
     --border-hover: rgba(168,85,247,0.35);
     --purple: #a855f7;
     --purple-dim: rgba(168,85,247,0.45);
+	--gray: #bfbfbf;
+	--gray-dim: rgba(191, 191, 191, 1);
+	--yellow: #d3c334;
+	--yellow-dim: rgba(211, 195, 52, 1);
+	--blue: #3399ff;
+	--blue-dim: rgba(51, 153, 255, 1);
     --green: #34d399;
     --green-dim: rgba(52,211,153,0.4);
     --red: #f87171;
@@ -380,6 +386,30 @@ body {
 .exp-header-row {
     display: flex; justify-content: space-between; align-items: center;
 }
+
+/* Tag Color */
+.tag-color-btn {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0);
+    border: 1px solid rgba(255,255,255,0.07);
+    padding: 7px 10px; border-radius: 8px; cursor: pointer;
+    transition: all 0.2s; flex: 1; justify-content: center;
+}
+
+.blue-tag {
+	background: var(--blue) !important;
+}
+.gray-tag {
+	background: var(--gray) !important;
+}
+.yellow-tag {
+	background: var(--yellow) !important;
+}
+
+.blue-tag:hover { color: var(--bg); }
+.gray-tag:hover { color: var(--bg); }
+.yellow-tag:hover { color: var(--bg); }
 
 /*  Blend Toggle Buttons  */
 .blend-toggle-row {
