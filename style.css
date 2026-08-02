@@ -180,6 +180,27 @@ body {
     color: var(--text);
 }
 
+/* CSS untuk Responsive Video Container */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px; /* Kemas & modern */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 /*  Override Method  */
 .override-method-layout { display: flex; flex-direction: column; gap: 14px; margin-top: 50px; }
 

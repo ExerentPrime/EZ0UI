@@ -28,7 +28,7 @@
     <nav class="topnav">
         <div class="nav-brand">
             <img src="EZ0UI.svg" alt="EZ0UI" class="h-8 w-auto logo-glow" onclick="window.location.reload();">
-            <span class="version-badge">V5.14</span>
+            <span class="version-badge">V5.15</span>
         </div>
 		<div class="current-info">
 			<button id="textureTagBtn" class="hidden toggle-pill">
@@ -76,7 +76,7 @@
 				<p class="instruction-body">
 					1.	If you are using your main account to mod, please do so at your own risk.<br>
 					2.	You won't get banned just for using UI modding, but just to be safe, please use a separate account just for modding.<br>
-					3.	For now, this tool has only been tested on two games (Honkai Impact 3rd and Zenless Zone Zero), and it works perfectly.<br>
+					3.	For now, this tool has only been tested on Genshin Impact, Honkai Impact 3rd and Zenless Zone Zero, and it works perfectly.<br>
 					4.	The scripts generated are NOT permanent. When you restart the game, or try it on a different device or with different settings, some UI elements will become visible again.
 				</p>
 				<h1 class="instruction-title">REQUIREMENT</h1>
@@ -130,13 +130,19 @@
 					15.	Now go back to the game and refresh your mods by pressing [F10].<br>
 					16.	To activate the script, press the toggle key [F4] (Default).<br>
 					17.	Done! You should see that the UI elements you marked are now invisible on your screen.<br>
-					<br>
-					Proper instructions will be updated later. This includes an explanation of what each button does.
 				</p>
 				<h1 class="instruction-title">VIDEO DEMO</h1>
-				<p class="instruction-body">
-					will be updated later...
-				</p>
+				
+				<div id="videoGuide" class="video-container">
+					<iframe
+						src="https://www.youtube.com/embed/aUDc-IUBSwk" 
+						title="EZ0UI WebUI Tutorial Guide" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						referrerpolicy="strict-origin-when-cross-origin" 
+						allowfullscreen>
+					</iframe>
+				</div>
 			</div>
 		</div>
 		
@@ -329,7 +335,7 @@
     <!-- </audio> -->
 
     <!-- Helper Agent -->
-    <div class="helper-container">
+    <div id="helperAgent" class="helper-container">
         <div id="helperTooltip" class="helper-tooltip">Need help?</div>
         <div class="helper-avatar" onclick="cycleHelperText()"></div>
     </div>
